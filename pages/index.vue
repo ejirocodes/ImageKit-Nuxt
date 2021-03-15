@@ -24,13 +24,13 @@
     </div> -->
     <no-ssr>
       <ik-image
-        path="default-image.jpg"
+        path="/default-image.jpg"
         :lqip="{ active: true, quality: 20, blur: 10 }"
         :transformation="[{ height: 600, width: 900 }]"
         loading="lazy"
       />
        <ik-image
-        path="photo-1593642532400-2682810df593__1__n457ndv6CPXoL.jpg"
+        path="/photo-1593642532400-2682810df593__1__n457ndv6CPXoL.jpg"
         :lqip="{ active: true, quality: 20, blur: 10 }"
         :transformation="[{ height: 600, width: 900 }]"
         loading="lazy"
