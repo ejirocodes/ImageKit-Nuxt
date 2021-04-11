@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <client-only>
-      <!-- <div>
+      <div>
         <ik-image
           path="/potriat_g-WKQi7tFiO15.jpg"
           :transformation="[
@@ -10,7 +10,9 @@
           style="margin: 2rem"
         />
         <p>Face Smart cropping</p>
-      </div> -->
+      </div>
+
+      <!-- Image & Text Overlay -->
       <div>
         <ik-image
           path="/mathilde-langevin-PM-ahoMuxhE-unsplash_o3JCZqZu8ibb.jpg"
@@ -29,9 +31,9 @@
           loading="lazy"
           style="margin: 2rem"
         />
-        <!-- <p>Auto Smart cropping</p> -->
+        <p>Auto Smart cropping</p>
       </div>
-      <!-- <ik-image
+      <ik-image
         path="/potriat_g-WKQi7tFiO15.jpg"
         :transformation="[
           {
@@ -51,7 +53,7 @@
           style="margin: 2rem"
         />
         <p>Default cropping</p>
-      </div> -->
+      </div>
 
       <ik-image
         path="/default-image.jpg"
@@ -110,7 +112,26 @@
         height="600"
         width="900"
       />
-      <!-- :transformation="[{ height: 600, width: 900 }]" -->
+
+      <!-- <ik-image path="/default-image.jpg" /> -->
+
+      <!-- lazy loading with low-quality placeholders -->
+      <ik-image
+        path="/mathilde-langevin-PM-ahoMuxhE-unsplash_o3JCZqZu8ibb.jpg"
+        :transformation="[{ height: 500, width: 500 }]"
+        :lqip="{ active: true, quality: 20, blur: 10 }"
+        loading="lazy"
+        style="margin: 2rem"
+        class="lazy"
+      />
+      <br />
+      <ik-image
+        path="/default-image.jpg"
+        :transformation="[{ height: 500, width: 500 }]"
+        :lqip="{ active: true, quality: 20, blur: 10 }"
+        loading="lazy"
+        class="lazy"
+      />
     </client-only>
   </div>
 </template>
@@ -127,8 +148,8 @@ export default {
 
 <style>
 .container {
-  margin: 0 auto;
-  min-height: 500vh;
+  margin: 5rem auto;
+  /* min-height: 500vh; */
   /* display: flex; */
   justify-content: center;
   align-items: center;
@@ -156,5 +177,9 @@ export default {
 
 .links {
   padding-top: 15px;
+}
+.lazy {
+  width: 500px;
+  height: 500px;
 }
 </style>
